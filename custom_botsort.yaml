@@ -1,0 +1,18 @@
+# Custom BoT-SORT config tuned for padel (fixed 4-player scene, static camera)
+tracker_type: botsort
+
+track_high_thresh: 0.30   # lower = detect partially occluded players
+track_low_thresh:  0.10
+new_track_thresh:  0.50   # higher = don't create spurious new tracks
+track_buffer:      90     # frames to keep a lost track alive (3s @ 30fps)
+match_thresh:      0.70   # slightly relaxed IoU matching
+fuse_score:        True
+
+# Global motion compensation — helps perspective drift
+gmc_method: sparseOptFlow
+
+# ReID (disabled — no extra model needed for 4 known players)
+proximity_thresh:   0.5
+appearance_thresh:  0.75
+with_reid:          False
+model:              auto
