@@ -6,3 +6,5 @@ yolov8s.pt
 /data_img
 /.claude
 /__pycache__
+
+output_racket.mp4
